@@ -3,7 +3,7 @@
 Page({
   data: {
     motto: 'Hello World',
-		marker: [{
+		markers: [{
 			latitude: 30.2741,
 			longitude: 120.1551
 		}]

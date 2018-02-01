@@ -4,5 +4,5 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 	<button class='scan' bindtap='scanQr'>扫码</button>
-	<map latitude='30.2741' longitude='120.1551' markers='{{marker}}'></map>
+	<map latitude='30.2741' longitude='120.1551' markers='{{markers}}'></map>
 </view>
