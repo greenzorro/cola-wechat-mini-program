@@ -1,15 +1,34 @@
 //index.js
+var appFunc = require('../../functions.js')
 
 Page({
   data: {
-    motto: 'Hello World',
-		markers: [{
-			latitude: 30.2741,
-			longitude: 120.1551
-		}]
+    name: 'World',
+		map: {
+			markers: [{
+				latitude: 30.2741,
+				longitude: 120.1551
+			}]
+		}
   },
-  onLoad: function () {
-  },
+	onShow: function () {
+		appFunc.globalFunc()  // 运行全局逻辑
+	},
+	changeName: function (e) {
+		this.setData({
+			name: "Cola"
+		})
+	},
+	moveMarker: function (e) {
+		this.setData({
+			map: {
+				markers: [{
+					latitude: this.data.map.markers[0].latitude + 0.0002,
+					longitude: 120.1551
+				}]
+			}
+		})
+	},
 	scanQr: function (e) {
 		wx.scanCode({
 			success: (res) => {
@@ -26,5 +45,11 @@ Page({
 				})
 			}
 		})
+	},
+	onShareAppMessage: function () {
+		return {
+			title: '转发标题',
+			path: '/page/index/index'
+		}
 	}
 })

@@ -1,8 +1,9 @@
 {
   "pages": [
+		"pages/account/account",
 		"pages/index/index",
-		"pages/logs/logs",
-    "pages/account/account"
+    "pages/logs/logs",
+		"pages/profile/profile"
   ],
   "window": {
     "navigationBarBackgroundColor": "#58b798",
@@ -26,19 +27,19 @@
         "iconPath": "images/tab_icon1.png",
         "selectedIconPath": "images/tab_icon1_selected.png"
       },
-			{
-				"pagePath": "pages/logs/logs",
-				"text": "日志",
-				"iconPath": "images/tab_icon1.png",
-				"selectedIconPath": "images/tab_icon1_selected.png"
-			},
-			{
-				"pagePath": "pages/account/account",
-				"text": "我的",
-				"iconPath": "images/tab_icon1.png",
-				"selectedIconPath": "images/tab_icon1_selected.png"
-			}
-		],
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "images/tab_icon1.png",
+        "selectedIconPath": "images/tab_icon1_selected.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "我的",
+        "iconPath": "images/tab_icon1.png",
+        "selectedIconPath": "images/tab_icon1_selected.png"
+      }
+    ],
     "position": "bottom"
   },
   "networkTimeout": {

@@ -1,4 +1,6 @@
 // pages/account/account.js
+var appFunc = require('../../functions.js')
+
 //获取应用实例
 const app = getApp()
 
@@ -7,6 +9,9 @@ Page({
 		userInfo: {},
 		hasUserInfo: false,
 		canIUse: wx.canIUse('button.open-type.getUserInfo')
+	},
+	onShow: function () {
+		appFunc.globalFunc()  // 运行全局逻辑
 	},
 	onLoad: function () {
 		if (app.globalData.userInfo) {

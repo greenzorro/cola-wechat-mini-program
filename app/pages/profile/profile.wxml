@@ -1,0 +1,8 @@
+<!--pages/profile/profile.wxml-->
+<form>
+	<!-- <input type='number' placeholder="填写数字" focus/> -->
+	<!-- <input type='idcard' placeholder="填写身份证"/> -->
+	<!-- <input type='digit' placeholder="填写数字（带小数点）"/> -->
+	<input class='focus_move' type='text' placeholder="填写文字" data-move-sequency='1' focus='{{focus1}}' confirm-type='next' bindconfirm='focusMove'/>
+	<input class='focus_move' type='text' password placeholder="填写密码" data-move-sequency='2' focus='{{focus2}}' confirm-type='done'/>
+</form>

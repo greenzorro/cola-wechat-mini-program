@@ -1,8 +1,9 @@
 <!--index.wxml-->
 <view class="container">
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto" bindtap='changeName'>Hello {{name}}</text>
   </view>
 	<button class='scan' bindtap='scanQr'>扫码</button>
-	<map latitude='30.2741' longitude='120.1551' markers='{{markers}}'></map>
+	<map latitude='30.2741' longitude='120.1551' markers='{{map.markers}}'></map>
+	<button bindtap='moveMarker'>上移标记点</button>
 </view>
