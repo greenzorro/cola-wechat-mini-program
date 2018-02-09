@@ -1,9 +1,9 @@
 <!--pages/profile/profile.wxml-->
 <form>
-	 <input type='number' placeholder="填写数字" focus/> 
-	 <input type='idcard' placeholder="填写身份证"/> 
-	 <input type='digit' placeholder="填写数字（带小数点）"/> 
-	<input type='text' placeholder="填写文字" focus='{{focus1}}' confirm-type='{{confirmType1}}' bindblur='focusSetting1' bindconfirm='focusMove1'/>
-	<input type='text' placeholder="填写文字" focus='{{focus2}}' confirm-type='{{confirmType2}}' bindblur='focusSetting2' bindconfirm='focusMove2'/>
-	<input type='text' password placeholder="填写密码" focus='{{focus3}}' confirm-type='done'/>
+	<input type='number' placeholder="填写数字" data-focus-sequency='0' focus='{{focusStatus[0]}}' confirm-type='{{confirmType[0]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
+	<input type='idcard' placeholder="填写身份证" data-focus-sequency='1' focus='{{focusStatus[1]}}' confirm-type='{{confirmType[1]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
+	<input type='digit' placeholder="填写数字（带小数点）" data-focus-sequency='2' focus='{{focusStatus[2]}}' confirm-type='{{confirmType[2]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
+	<input type='text' placeholder="填写文字" data-focus-sequency='3' focus='{{focusStatus[3]}}' confirm-type='{{confirmType[3]}}' bindconfirm='focusMove' bindblur='inputSetting'/>
+	<input type='text' placeholder="填写文字" data-focus-sequency='4' focus='{{focusStatus[4]}}' confirm-type='{{confirmType[4]}}' bindconfirm='focusMove' bindblur='inputSetting'/>
+	<input type='text' password placeholder="填写密码" data-focus-sequency='5' focus='{{focusStatus[5]}}' confirm-type='{{confirmType[5]}}' bindconfirm='focusMove'/>
 </form>
