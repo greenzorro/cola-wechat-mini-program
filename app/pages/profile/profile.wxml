@@ -1,9 +1,25 @@
 <!--pages/profile/profile.wxml-->
-<form>
-	<input type='number' placeholder="填写数字" data-focus-sequency='0' focus='{{focusStatus[0]}}' confirm-type='{{confirmType[0]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
-	<input type='idcard' placeholder="填写身份证" data-focus-sequency='1' focus='{{focusStatus[1]}}' confirm-type='{{confirmType[1]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
-	<input type='digit' placeholder="填写数字（带小数点）" data-focus-sequency='2' focus='{{focusStatus[2]}}' confirm-type='{{confirmType[2]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
-	<input type='text' placeholder="填写文字" data-focus-sequency='3' focus='{{focusStatus[3]}}' confirm-type='{{confirmType[3]}}' bindconfirm='focusMove' bindblur='inputSetting'/>
-	<input type='text' placeholder="填写文字" data-focus-sequency='4' focus='{{focusStatus[4]}}' confirm-type='{{confirmType[4]}}' bindconfirm='focusMove' bindblur='inputSetting'/>
-	<input type='text' password placeholder="填写密码" data-focus-sequency='5' focus='{{focusStatus[5]}}' confirm-type='{{confirmType[5]}}' bindconfirm='focusMove'/>
+<form bindsubmit=''>
+
+	<input type='number' placeholder='填写数字' data-focus-sequency='0' focus='{{focusStatus[0]}}' confirm-type='{{confirmType[0]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
+	<input type='idcard' placeholder='填写身份证' data-focus-sequency='1' focus='{{focusStatus[1]}}' confirm-type='{{confirmType[1]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
+	<input type='digit' placeholder='填写数字（带小数点）' data-focus-sequency='2' focus='{{focusStatus[2]}}' confirm-type='{{confirmType[2]}}' bindconfirm='focusMove' bindblur='inputSetting'/> 
+  <picker mode='selector' bindchange='bindPickerChange' value='{{pickerValue}}' range='{{pickerArray}}' data-focus-sequency='3' focus='{{focusStatus[3]}}' confirm-type='{{confirmType[3]}}' bindconfirm='focusMove' bindblur='inputSetting'>
+    <view>{{pickerArray[pickerValue]}}</view>
+  </picker>
+  <picker mode='region' bindchange='bindRegionChange' value='{{region}}' data-focus-sequency='4' focus='{{focusStatus[4]}}' confirm-type='{{confirmType[4]}}' bindconfirm='focusMove' bindblur='inputSetting'>
+    <view>{{region[0]}} / {{region[1]}} / {{region[2]}}</view>
+  </picker>
+	<input type='text' placeholder='填写文字' data-focus-sequency='5' focus='{{focusStatus[5]}}' confirm-type='{{confirmType[5]}}' bindconfirm='focusMove' bindblur='inputSetting'/>
+	<input type='text' placeholder='填写文字' data-focus-sequency='6' focus='{{focusStatus[6]}}' confirm-type='{{confirmType[6]}}' bindconfirm='focusMove' bindblur='inputSetting'/>
+	<input type='text' password placeholder='填写密码' data-focus-sequency='7' focus='{{focusStatus[7]}}' confirm-type='{{confirmType[7]}}' bindconfirm='focusMove'/>
+
+  <view>
+    <checkbox-group bindchange='checkboxChange'>
+      <checkbox value='协议' checked/> 我同意 
+    </checkbox-group>
+  </view>
+
+  <button type='primary' disabled='{{buttonState}}' loading='{{buttonLoading}}' form-type='submit'>提交</button>
+
 </form>
